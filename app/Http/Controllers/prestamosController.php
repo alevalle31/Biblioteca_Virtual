@@ -127,13 +127,5 @@ class prestamosController extends Controller
         $prestamos->appends(['busqueda' => $busqueda]);
         return view('prestamos.indexPrestamo', compact('prestamos'));
 
-       /* $busqueda = $request->input('buscar');
-        $prestamos = Prestamo::where('nombre', 'LIKE', '%' . $busqueda . '%')
-            ->orWhere('fecha_solicitud', 'LIKE', '%' . $busqueda . '%')
-            ->orWhere('fecha_prestamo', 'LIKE', '%' . $busqueda . '%')
-            ->orWhere('fecha_devolucion', 'LIKE', '%' . $busqueda . '%')
-            ->paginate(10);
-        $prestamos->appends(['busqueda' => $busqueda]);
-        return view('prestamos.indexPrestamo', compact('prestamos'));*/
     }
 }
